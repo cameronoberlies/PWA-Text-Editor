@@ -18,11 +18,20 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Webpack Plugin',
+      }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
       
     ],
+   
 
     module: {
-      // CSS loaders
+     
       rules: [
         {
           test: /\.css$/i,
@@ -31,7 +40,7 @@ module.exports = () => {
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
-          // We use babel-loader in order to use ES6.
+         
           use: {
             loader: 'babel-loader',
             options: {
