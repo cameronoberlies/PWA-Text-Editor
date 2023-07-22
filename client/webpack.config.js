@@ -24,6 +24,25 @@ module.exports = () => {
         swSrc: './src-sw.js',             // Service worker source file
         swDest: 'src-sw.js',              // Output file name for the service worker
       }),
+      
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'Text Editor',
+        short_name: 'Text Editor',
+        description: 'Text Editor!',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: './',
+        publicPath: './',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
+      }),
     ],
 
     module: {
