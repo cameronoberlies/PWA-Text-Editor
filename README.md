@@ -1,5 +1,5 @@
 # PWA-Text-Editor
-##This is a feature-rich text editor web application designed with next-gen JavaScript. It follows a client-server folder structure and utilizes IndexedDB for seamless content storage. The application supports offline capabilities through service workers and Workbox integration. Deployment to Heroku is simple with proper webpack build scripts.
+This is a feature-rich text editor web application designed with next-gen JavaScript. It follows a client-server folder structure and utilizes IndexedDB for seamless content storage. The application supports offline capabilities through service workers and Workbox integration. Deployment to Heroku is simple with proper webpack build scripts.
 
 Features
 Client-server folder structure.
